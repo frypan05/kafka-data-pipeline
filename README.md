@@ -1,13 +1,10 @@
-<<<<<<< HEAD
-# kafka-data-pipeline
-=======
 # Real-Time Data Pipeline with Kafka & ELK Stack
 
 > A production-ready real-time monitoring and logging system using Apache Kafka and ELK Stack, deployed entirely on free-tier cloud services.
 
 ![Architecture](https://img.shields.io/badge/Kafka-Real--Time-orange) ![ELK Stack](https://img.shields.io/badge/ELK-Monitoring-blue) ![Free Tier](https://img.shields.io/badge/Cost-$0-green)
 
-## 🏗️ Architecture
+## Architecture
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
@@ -31,7 +28,7 @@
 └─────────────────────────────────────────────────────────────┘
 ```
 
-## 🎯 Project Goals
+## Project Goals
 
 - **Real-Time Processing**: Handle 1000+ events per second
 - **Scalability**: Horizontally scalable architecture
@@ -39,7 +36,7 @@
 - **Cost**: $0 using free-tier services
 - **Production-Ready**: CI/CD, error handling, monitoring
 
-## 🚀 Tech Stack
+## Tech Stack
 
 ### Core Services
 - **Apache Kafka**: Distributed event streaming (Render/Upstash)
@@ -60,7 +57,7 @@
 - **Docker**: Containerization
 - **Terraform**: Infrastructure as Code
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 data-pipeline-kafka/
@@ -119,7 +116,7 @@ data-pipeline-kafka/
 └── README.md                        # This file
 ```
 
-## 🎓 What You'll Learn
+## What You'll Learn
 
 ### DevOps Skills
 - ✅ Setting up CI/CD pipelines
@@ -137,7 +134,7 @@ data-pipeline-kafka/
 - ✅ Performance optimization
 - ✅ Security best practices
 
-## 🛠️ Prerequisites
+## Prerequisites
 
 ```bash
 # Required Tools
@@ -154,7 +151,7 @@ data-pipeline-kafka/
 - Postman/Insomnia
 ```
 
-## ⚡ Quick Start (Local Development)
+## Quick Start (Local Development)
 
 ### 1. Clone the Repository
 ```bash
@@ -203,7 +200,7 @@ python log-producer.py
 - **API Gateway**: http://localhost:3000
 - **Frontend**: http://localhost:5173
 
-## 🌐 Production Deployment
+## Production Deployment
 
 ### Phase 1: GCP Setup (Kafka Cluster)
 ```bash
@@ -232,7 +229,7 @@ vercel --prod
 npm run migrate
 ```
 
-## 📊 Monitoring & Observability
+## Monitoring & Observability
 
 ### Health Endpoints
 - Kafka: `http://your-gcp-vm:9092/health`
@@ -253,7 +250,7 @@ npm run migrate
 3. **Application Performance Dashboard**
 4. **Cost Monitoring Dashboard**
 
-## 🧪 Testing
+## Testing
 
 ```bash
 # Unit Tests
@@ -269,7 +266,7 @@ npm run test:load
 npm run test:e2e
 ```
 
-## 📈 Performance Benchmarks
+## Performance Benchmarks
 
 | Metric | Target | Achieved |
 |--------|--------|----------|
@@ -278,7 +275,7 @@ npm run test:e2e
 | Uptime | 99.9% | ✅ 99.95% |
 | Cost | $0/month | ✅ $0/month |
 
-## 🔐 Security
+## Security
 
 - ✅ TLS encryption for Kafka
 - ✅ Authentication via API keys
@@ -287,7 +284,7 @@ npm run test:e2e
 - ✅ Rate limiting
 - ✅ Input validation
 
-## 🐛 Troubleshooting
+## Troubleshooting
 
 ### Common Issues
 
@@ -317,7 +314,7 @@ docker-compose up -d --scale consumer=3
 
 See [troubleshooting.md](docs/troubleshooting.md) for more solutions.
 
-## 🎯 Roadmap
+## Roadmap
 
 ### Phase 1: MVP (Week 1-2) ✅
 - [x] Local development setup
@@ -326,21 +323,21 @@ See [troubleshooting.md](docs/troubleshooting.md) for more solutions.
 - [x] Basic producers/consumers
 - [x] Sample dashboards
 
-### Phase 2: Production (Week 3-4) 🚧
+### Phase 2: Production (Week 3-4)
 - [ ] GCP deployment
 - [ ] CI/CD pipelines
 - [ ] Monitoring & alerting
 - [ ] Security hardening
 - [ ] Documentation
 
-### Phase 3: Advanced Features (Week 5-6) 📋
+### Phase 3: Advanced Features (Week 5-6)
 - [ ] Multi-region deployment
 - [ ] Auto-scaling
 - [ ] ML-based anomaly detection
 - [ ] Advanced analytics
 - [ ] Cost optimization
 
-## 📚 Resources
+## Resources
 
 ### Documentation
 - [Apache Kafka Docs](https://kafka.apache.org/documentation/)
@@ -357,7 +354,7 @@ See [troubleshooting.md](docs/troubleshooting.md) for more solutions.
 - [GitHub Discussions](https://github.com/yourusername/data-pipeline-kafka/discussions)
 - [Discord Server](https://discord.gg/your-invite)
 
-## 🤝 Contributing
+## Contributing
 
 Contributions are welcome! Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details.
 
@@ -367,33 +364,32 @@ Contributions are welcome! Please read [CONTRIBUTING.md](CONTRIBUTING.md) for de
 4. Push to the branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
-## 📄 License
+## License
 
 This project is licensed under the MIT License - see [LICENSE](LICENSE) file for details.
 
-## 👨‍💻 Author
+## Author
 
 **Your Name**
 - GitHub: [@yourusername](https://github.com/yourusername)
 - LinkedIn: [Your Profile](https://linkedin.com/in/yourprofile)
 - Email: your.email@example.com
 
-## 🙏 Acknowledgments
+## Acknowledgments
 
 - Apache Kafka community
 - Elastic Stack team
 - DevOps best practices from industry leaders
 - Free tier cloud providers
 
-## 📞 Support
+## Support
 
-- 📧 Email: support@yourproject.com
-- 💬 Discord: [Join Server](https://discord.gg/your-invite)
-- 🐛 Issues: [GitHub Issues](https://github.com/yourusername/data-pipeline-kafka/issues)
+- Email: support@yourproject.com
+- Discord: [Join Server](https://discord.gg/your-invite)
+- Issues: [GitHub Issues](https://github.com/yourusername/data-pipeline-kafka/issues)
 
 ---
 
-**⭐ If this project helped you, please give it a star!**
+**If this project helped you, please give it a star!**
 
-Built with ❤️ for the DevOps community
->>>>>>> 1c6c2e5 (feat: kafka service + quickie sh script)
+Built with love for the DevOps community
