@@ -1,0 +1,52 @@
+# Logstash Configuration File
+
+# HTTP API Settings
+http.host: "0.0.0.0"
+http.port: 9600
+
+# Pipeline Settings
+pipeline.workers: 2
+pipeline.batch.size: 125
+pipeline.batch.delay: 50
+
+# Pipeline Ordered Auto-Reload
+pipeline.ordered: auto
+
+# Queue Settings
+queue.type: memory
+queue.max_bytes: 1gb
+
+# Dead Letter Queue
+dead_letter_queue.enable: false
+
+# Monitoring
+monitoring.enabled: false
+
+# Log Settings
+log.level: info
+log.format: plain
+path.logs: /usr/share/logstash/logs
+
+# Config Settings
+path.config: /usr/share/logstash/pipeline
+config.reload.automatic: true
+config.reload.interval: 3s
+
+# API Settings
+api.enabled: true
+api.http.host: "0.0.0.0"
+api.http.port: 9600
+
+# X-Pack Settings (disabled for free tier)
+xpack.monitoring.enabled: false
+xpack.management.enabled: false
+
+# Performance Tuning
+pipeline.unsafe_shutdown: false
+pipeline.ecs_compatibility: v8
+
+# Log Slow Processing
+slowlog.threshold.warn: 2s
+slowlog.threshold.info: 1s
+slowlog.threshold.debug: 500ms
+slowlog.threshold.trace: 100ms

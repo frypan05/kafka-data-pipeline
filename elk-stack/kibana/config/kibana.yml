@@ -1,0 +1,120 @@
+# Kibana Configuration File
+
+# Server Settings
+server.host: "0.0.0.0"
+server.port: 5601
+server.name: "kibana-pipeline"
+server.publicBaseUrl: "http://localhost:5601"
+
+# Elasticsearch Connection
+elasticsearch.hosts: ["http://elasticsearch:9200"]
+elasticsearch.requestTimeout: 30000
+elasticsearch.pingTimeout: 3000
+
+# Kibana Index
+kibana.index: ".kibana"
+
+# Default Application
+kibana.defaultAppId: "discover"
+
+# Logging
+logging.root.level: info
+logging.appenders.default:
+  type: console
+  layout:
+    type: pattern
+    pattern: "[%date][%level][%logger] %message"
+
+logging.loggers:
+  - name: elasticsearch
+    level: warn
+  - name: http.server.response
+    level: warn
+  - name: plugins
+    level: info
+
+# Monitoring (disabled for free tier)
+monitoring.ui.enabled: false
+monitoring.kibana.collection.enabled: false
+monitoring.enabled: false
+
+# X-Pack Features (configured for free tier)
+xpack.security.enabled: false
+xpack.monitoring.enabled: false
+xpack.graph.enabled: false
+xpack.watcher.enabled: false
+xpack.reporting.enabled: false
+xpack.ml.enabled: false
+xpack.grokdebugger.enabled: true
+xpack.searchprofiler.enabled: true
+
+# Maps
+xpack.maps.enabled: true
+xpack.maps.showMapVisualizationTypes: true
+
+# Telemetry (opt-out)
+telemetry.enabled: false
+telemetry.optIn: false
+
+# Console
+console.enabled: true
+
+# Status
+status.allowAnonymous: true
+
+# Performance & Optimization
+elasticsearch.maxSockets: 100
+elasticsearch.compression: true
+
+# Session timeout (24 hours)
+xpack.security.session.idleTimeout: "24h"
+xpack.security.session.lifespan: "30d"
+
+# Save Objects
+savedObjects.maxImportPayloadBytes: 26214400
+
+# Development Settings
+csp.strict: false
+csp.warnLegacyBrowsers: false
+
+# UI Settings
+i18n.locale: "en"
+
+# Data Views
+data.search.aggs.shardDelay.enabled: true
+
+# Advanced Settings
+advanced_settings:
+  defaultIndex: "pipeline-logs-*"
+
+# Paths
+path.data: /usr/share/kibana/data
+
+# PID File
+pid.file: /usr/share/kibana/kibana.pid
+
+# Max Payload
+server.maxPayload: 1048576
+
+# Compression
+server.compression.enabled: true
+
+# CORS (for development)
+server.cors.enabled: false
+
+# SSL/TLS (disabled for local development)
+server.ssl.enabled: false
+
+# Health Check
+server.healthCheck.delay: 10000
+
+# Memory Circuit Breaker
+ops.cGroupOverrides.cpuPath: /sys/fs/cgroup/cpu
+ops.cGroupOverrides.cpuAcctPath: /sys/fs/cgroup/cpuacct
+
+# Plugins
+plugins.scanDirs: ["/usr/share/kibana/plugins"]
+
+# Custom Branding (optional)
+# xpack.reporting.kibanaServer.hostname: "localhost"
+# xpack.reporting.kibanaServer.port: 5601
